@@ -1,13 +1,34 @@
 Link-to-remote-with-conditions
 ==============================
 
-Introduction goes here.
+This plugin adds the ability to handle conditionals in link_to_remote calls. It
+provides two methods:
+  - link_to_remote_if(condition, name, options = {}, html_options = nil)
+  - link_to_remote_unless(condition, name, options = {}, html_options = nil)
+
+They works in the same manner that link_to_if and link_to_unless do; if the
+supplied conditional is true, then it renders a link; if the supplied 
+conditional is false, then it simply renders the link's text.
+
+Both methods support the same options as link_to_remote; they are simply 
+wrappers around it.
+
+Code for these methods was taken from a patch submitted by Gumaro Melendez to 
+the Rails lighthouse issue tracker. You can find the original post here:
+
+https://rails.lighthouseapp.com/projects/8994/tickets/511-link_to_remote_if-and-l
 
 
 Example
 =======
 
-Example goes here.
+# Generates:  <a href="#" onclick="new Ajax.Request('/do/something', 
+#             {asynchronous:true, evalScripts:true}); return false;">
+#             This is a link</a>
+link_to_remote_if true, 'This is a link', :url => do_something_path
+
+# Generates: This is not a link
+link_to_remote_unless true, 'This is not a link, :url => do_something_path
 
 
 Copyright (c) 2009 Nicholas Firth-McCoy, released under the MIT license
