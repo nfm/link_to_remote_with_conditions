@@ -6,7 +6,6 @@ module ActionView
       # default behavior, you can pass a block that accepts the name or the full
       # argument list for link_to_remote_if.
       def link_to_remote_if(condition, name, options = {}, html_options = nil, &block)
-        logger.error "FOOFOOFOO"
         if condition
           link_to_remote(name, options, html_options)
         else
