@@ -16,7 +16,7 @@ end
 desc 'Generate documentation for the link_to_remote_with_conditions plugin.'
 Rake::RDocTask.new(:rdoc) do |rdoc|
   rdoc.rdoc_dir = 'rdoc'
-  rdoc.title    = 'Link-to-remote-with-conditions'
+  rdoc.title    = 'link_to_remote_with_conditions'
   rdoc.options << '--line-numbers' << '--inline-source'
   rdoc.rdoc_files.include('README')
   rdoc.rdoc_files.include('lib/**/*.rb')
