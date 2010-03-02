@@ -28,7 +28,7 @@ Example
 link_to_remote_if true, 'This is a link', :url => do_something_path
 
 # Generates: This is not a link
-link_to_remote_unless true, 'This is not a link, :url => do_something_path
+link_to_remote_unless true, 'This is not a link', :url => do_something_path
 
 
 Copyright (c) 2009 Nicholas Firth-McCoy, released under the MIT license
